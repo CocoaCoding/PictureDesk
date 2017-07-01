@@ -1,0 +1,15 @@
+July 1. 2017
+- Swift 4 conversion
+- Rename with modal SheetWindow
+
+12. Juni 2017
+- Click on Folder to show its picture content
+- Drag & Drop from CollectionView to TableView, files are not moved yet.
+
+11. Juni 2017
+- NSOpenPanel für Verzeichnisauswahl
+- extension ViewController + NSTableViewDataSource
+- FolderRepository mit Load und Save Methoden
+- TableView und Add-Button im Fenster
+- Autosave wird im MainWindowController gesetzt, weil es im Interface Builder nicht funktioniert
+- Autosave für SplitView

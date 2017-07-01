@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1FD8D71E2BFEC100ACC72C /* HHSFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FD8D61E2BFEC100ACC72C /* HHSFileHelper.swift */; };
+		3F603C751EF8698B008B43DA /* FilesMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F603C741EF8698B008B43DA /* FilesMover.swift */; };
+		3F694F6D1E2AC25A00B0C82B /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F694F6B1E2AC25A00B0C82B /* CollectionViewItem.swift */; };
+		3F694F6E1E2AC25A00B0C82B /* CollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F694F6C1E2AC25A00B0C82B /* CollectionViewItem.xib */; };
+		3F694F701E2AC40800B0C82B /* ViewController + NSCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F694F6F1E2AC40800B0C82B /* ViewController + NSCollectionViewDataSource.swift */; };
 		3F6AC49D1E2AB6A400DFFE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6AC49C1E2AB6A400DFFE82 /* AppDelegate.swift */; };
 		3F6AC49F1E2AB6A400DFFE82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6AC49E1E2AB6A400DFFE82 /* ViewController.swift */; };
 		3F6AC4A11E2AB6A400DFFE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6AC4A01E2AB6A400DFFE82 /* Assets.xcassets */; };
 		3F6AC4A41E2AB6A400DFFE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6AC4A21E2AB6A400DFFE82 /* Main.storyboard */; };
 		3F6AC4AF1E2AB6A400DFFE82 /* PictureDeskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6AC4AE1E2AB6A400DFFE82 /* PictureDeskTests.swift */; };
+		3F6AC4BA1E2ABBEF00DFFE82 /* ImageDirectoryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6AC4B91E2ABBEF00DFFE82 /* ImageDirectoryLoader.swift */; };
+		3F6AC4BC1E2ABC0300DFFE82 /* ImageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6AC4BB1E2ABC0300DFFE82 /* ImageFile.swift */; };
+		3FA64EC71EEDC26A002FE3C0 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA64EC61EEDC26A002FE3C0 /* MainWindowController.swift */; };
+		3FA64EC91EEDC522002FE3C0 /* FolderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA64EC81EEDC522002FE3C0 /* FolderRepository.swift */; };
+		3FA64ECB1EEDC6ED002FE3C0 /* ViewController + NSTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA64ECA1EEDC6ED002FE3C0 /* ViewController + NSTableViewDataSource.swift */; };
+		3FA64ECE1EEDCA63002FE3C0 /* Changelog in Resources */ = {isa = PBXBuildFile; fileRef = 3FA64ECD1EEDCA63002FE3C0 /* Changelog */; };
+		3FFC4C891E33CD1E00B49B86 /* AppsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC4C881E33CD1E00B49B86 /* AppsConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1FD8D61E2BFEC100ACC72C /* HHSFileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHSFileHelper.swift; sourceTree = "<group>"; };
+		3F603C741EF8698B008B43DA /* FilesMover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesMover.swift; sourceTree = "<group>"; };
+		3F694F6B1E2AC25A00B0C82B /* CollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
+		3F694F6C1E2AC25A00B0C82B /* CollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
+		3F694F6F1E2AC40800B0C82B /* ViewController + NSCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController + NSCollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		3F6AC4991E2AB6A400DFFE82 /* PictureDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6AC49C1E2AB6A400DFFE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6AC49E1E2AB6A400DFFE82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +51,13 @@
 		3F6AC4AA1E2AB6A400DFFE82 /* PictureDeskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureDeskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6AC4AE1E2AB6A400DFFE82 /* PictureDeskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDeskTests.swift; sourceTree = "<group>"; };
 		3F6AC4B01E2AB6A400DFFE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F6AC4B91E2ABBEF00DFFE82 /* ImageDirectoryLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDirectoryLoader.swift; sourceTree = "<group>"; };
+		3F6AC4BB1E2ABC0300DFFE82 /* ImageFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFile.swift; sourceTree = "<group>"; };
+		3FA64EC61EEDC26A002FE3C0 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		3FA64EC81EEDC522002FE3C0 /* FolderRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderRepository.swift; sourceTree = "<group>"; };
+		3FA64ECA1EEDC6ED002FE3C0 /* ViewController + NSTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController + NSTableViewDataSource.swift"; sourceTree = "<group>"; };
+		3FA64ECD1EEDCA63002FE3C0 /* Changelog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog; sourceTree = "<group>"; };
+		3FFC4C881E33CD1E00B49B86 /* AppsConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +99,21 @@
 		3F6AC49B1E2AB6A400DFFE82 /* PictureDesk */ = {
 			isa = PBXGroup;
 			children = (
+				3FA64ECC1EEDC752002FE3C0 /* ViewController */,
 				3F6AC49C1E2AB6A400DFFE82 /* AppDelegate.swift */,
-				3F6AC49E1E2AB6A400DFFE82 /* ViewController.swift */,
+				3F694F6B1E2AC25A00B0C82B /* CollectionViewItem.swift */,
+				3F6AC4B91E2ABBEF00DFFE82 /* ImageDirectoryLoader.swift */,
+				3F6AC4BB1E2ABC0300DFFE82 /* ImageFile.swift */,
+				3F1FD8D61E2BFEC100ACC72C /* HHSFileHelper.swift */,
 				3F6AC4A01E2AB6A400DFFE82 /* Assets.xcassets */,
 				3F6AC4A21E2AB6A400DFFE82 /* Main.storyboard */,
+				3F694F6C1E2AC25A00B0C82B /* CollectionViewItem.xib */,
 				3F6AC4A51E2AB6A400DFFE82 /* Info.plist */,
+				3FFC4C881E33CD1E00B49B86 /* AppsConfig.swift */,
+				3FA64EC61EEDC26A002FE3C0 /* MainWindowController.swift */,
+				3FA64EC81EEDC522002FE3C0 /* FolderRepository.swift */,
+				3FA64ECD1EEDCA63002FE3C0 /* Changelog */,
+				3F603C741EF8698B008B43DA /* FilesMover.swift */,
 			);
 			path = PictureDesk;
 			sourceTree = "<group>";
@@ -91,6 +125,16 @@
 				3F6AC4B01E2AB6A400DFFE82 /* Info.plist */,
 			);
 			path = PictureDeskTests;
+			sourceTree = "<group>";
+		};
+		3FA64ECC1EEDC752002FE3C0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3F6AC49E1E2AB6A400DFFE82 /* ViewController.swift */,
+				3F694F6F1E2AC40800B0C82B /* ViewController + NSCollectionViewDataSource.swift */,
+				3FA64ECA1EEDC6ED002FE3C0 /* ViewController + NSTableViewDataSource.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,17 +182,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Holger Hinzberg";
 				TargetAttributes = {
 					3F6AC4981E2AB6A400DFFE82 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = Q4JYUA6UF4;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					3F6AC4A91E2AB6A400DFFE82 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = Q4JYUA6UF4;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3F6AC4981E2AB6A400DFFE82;
 					};
@@ -179,7 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F6AC4A11E2AB6A400DFFE82 /* Assets.xcassets in Resources */,
+				3FA64ECE1EEDCA63002FE3C0 /* Changelog in Resources */,
 				3F6AC4A41E2AB6A400DFFE82 /* Main.storyboard in Resources */,
+				3F694F6E1E2AC25A00B0C82B /* CollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +245,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6AC4BA1E2ABBEF00DFFE82 /* ImageDirectoryLoader.swift in Sources */,
+				3F694F701E2AC40800B0C82B /* ViewController + NSCollectionViewDataSource.swift in Sources */,
+				3F6AC4BC1E2ABC0300DFFE82 /* ImageFile.swift in Sources */,
 				3F6AC49F1E2AB6A400DFFE82 /* ViewController.swift in Sources */,
+				3F694F6D1E2AC25A00B0C82B /* CollectionViewItem.swift in Sources */,
+				3FA64ECB1EEDC6ED002FE3C0 /* ViewController + NSTableViewDataSource.swift in Sources */,
+				3FA64EC91EEDC522002FE3C0 /* FolderRepository.swift in Sources */,
+				3FFC4C891E33CD1E00B49B86 /* AppsConfig.swift in Sources */,
 				3F6AC49D1E2AB6A400DFFE82 /* AppDelegate.swift in Sources */,
+				3F1FD8D71E2BFEC100ACC72C /* HHSFileHelper.swift in Sources */,
+				3FA64EC71EEDC26A002FE3C0 /* MainWindowController.swift in Sources */,
+				3F603C751EF8698B008B43DA /* FilesMover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +299,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -249,7 +309,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -290,7 +354,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -298,7 +364,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -332,7 +402,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cocoa-coding.de.PictureDesk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -346,7 +417,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cocoa-coding.de.PictureDesk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -361,7 +433,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cocoa-coding.de.PictureDeskTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictureDesk.app/Contents/MacOS/PictureDesk";
 			};
 			name = Debug;
@@ -377,7 +450,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cocoa-coding.de.PictureDeskTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictureDesk.app/Contents/MacOS/PictureDesk";
 			};
 			name = Release;
@@ -401,6 +475,7 @@
 				3F6AC4B51E2AB6A400DFFE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F6AC4B61E2AB6A400DFFE82 /* Build configuration list for PBXNativeTarget "PictureDeskTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +484,7 @@
 				3F6AC4B81E2AB6A400DFFE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,6 +17,21 @@ public class HHSFileHelper: NSObject
         return URL.init(fileURLWithPath: paths[0])
     }
     
+    public func deleteFile(source:URL) -> Bool
+    {
+        let filemanager = FileManager.default
+        do
+        {
+            try filemanager.removeItem(at: source)
+            return true
+        }
+        catch 
+        {
+            print("delete error")
+        }
+        return false
+    }
+    
     public func renameFile(source:URL, destination:URL) -> Bool
     {
         let filemanager = FileManager.default

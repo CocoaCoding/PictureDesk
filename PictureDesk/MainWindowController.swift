@@ -8,12 +8,15 @@
 
 import Cocoa
 
-class MainWindowController: NSWindowController {
-
+class MainWindowController: NSWindowController
+{
     override func windowDidLoad()
     {
         super.windowDidLoad()
         self.windowFrameAutosaveName = NSWindow.FrameAutosaveName(rawValue: "MainWindow")
     }
+    
 
+    
+    
 }

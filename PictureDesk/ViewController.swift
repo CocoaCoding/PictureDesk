@@ -7,8 +7,9 @@
 //
 
 import Cocoa
+import Quartz
 
-class ViewController: NSViewController
+class ViewController: NSViewController, KeyPressedProtocol
 {
     public var Config:AppsConfig?
     public let imageDirectoryLoader = ImageDirectoryLoader()
@@ -19,7 +20,7 @@ class ViewController: NSViewController
     
     var indexPathsOfItemsBeingDragged: Set<NSIndexPath>!
     
-    @IBOutlet weak var collectionView: NSCollectionView!
+    @IBOutlet weak var collectionView: CustomCollectionView!
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var splitView: NSSplitView!
     public let folderRepository = FolderRepository()
@@ -56,11 +57,12 @@ class ViewController: NSViewController
         //collectionView.setDraggingSourceOperationMask(NSDragOperation.every, forLocal: false)
         
         tableView.registerForDraggedTypes([NSURLPboardType])
-        
     }
     
     fileprivate func configureCollectionView()
     {
+        self.collectionView.KeyHandler = self
+        
         // 1
         let flowLayout = NSCollectionViewFlowLayout()
         flowLayout.itemSize = NSSize(width: self.Config!.itemSize, height: self.Config!.itemSize)
@@ -72,13 +74,17 @@ class ViewController: NSViewController
         collectionView.layer?.backgroundColor = NSColor.clear.cgColor
         collectionView.backgroundColors = [NSColor.clear]
     }
-
+    
     override var representedObject: Any?
-    {
+        {
         didSet
         {
         }
     }
+    
+
+    
+    // MARK: Toolbar Buttons and other GUI
     
     @IBAction func desktopFolderButtonClicked(sender:AnyObject)
     {
@@ -87,6 +93,37 @@ class ViewController: NSViewController
         imageDirectoryLoader.loadDataForFolderWithUrl(self.currentDirectory!)
         self.collectionView.reloadData()
     }
+    
+    @IBAction func folderAddButtonClicked(_ sender: NSButton)
+    {
+        let openPanel = NSOpenPanel()
+        openPanel.canChooseFiles = false
+        openPanel.canChooseDirectories = true
+        
+        openPanel.beginSheetModal(for: self.view.window!, completionHandler:
+            {
+                (result:NSApplication.ModalResponse) in
+                if(result == NSApplication.ModalResponse.OK)
+                {
+                    let fileURL = openPanel.url!
+                    // print(fileURL)
+                    // do something with the selected file. Its url = fileURL
+                    self.folderRepository.appendFolderAt(folder: fileURL)
+                    self.tableView.reloadData()
+                }
+        })
+    }
+    
+    @IBAction func sliderValueChanged(_ sender: Any)
+    {
+        let slider = sender as! NSSlider
+        self.Config?.itemSize = slider.doubleValue
+        
+        let layout = collectionView.collectionViewLayout as! NSCollectionViewFlowLayout
+        layout.itemSize = NSSize(width: self.Config!.itemSize, height: self.Config!.itemSize)
+    }
+    
+    // MARK: Context Menue
     
     @IBAction func renameContextmenuItemClicked(_ sender: Any)
     {
@@ -147,41 +184,25 @@ class ViewController: NSViewController
     
     @IBAction func deleteContextmenuItemClicked(_ sender: Any)
     {
-        
-    }
-    
-    @IBAction func sliderValueChanged(_ sender: Any)
-    {
-        let slider = sender as! NSSlider
-        self.Config?.itemSize = slider.doubleValue
-        
-        let layout = collectionView.collectionViewLayout as! NSCollectionViewFlowLayout
-        layout.itemSize = NSSize(width: self.Config!.itemSize, height: self.Config!.itemSize)
-    }
-    
-    
-    
-    @IBAction func folderAddButtonClicked(_ sender: NSButton)
-    {
-        let openPanel = NSOpenPanel()
-        openPanel.canChooseFiles = false
-        openPanel.canChooseDirectories = true
-        
-        openPanel.beginSheetModal(for: self.view.window!, completionHandler:
+        let imageSelection = self.collectionView.selectionIndexPaths
+        for singleImage in imageSelection
         {
-            (result:NSApplication.ModalResponse) in
-            if(result == NSApplication.ModalResponse.OK)
+            let image = self.imageDirectoryLoader.imageFileForIndexPath(singleImage)
+            let fileHelper = HHSFileHelper()
+            if fileHelper.deleteFile(source: image.fileURL!) == true
             {
-                let fileURL = openPanel.url!
-                // print(fileURL)
-                // do something with the selected file. Its url = fileURL
-                self.folderRepository.appendFolderAt(folder: fileURL)
-                self.tableView.reloadData()
+                self.imageDirectoryLoader.removeImagesByUrls(urls: [image.fileURL!])
             }
-        })
+        }
+       self.collectionView.reloadData()
     }
     
-
-    
+    func keyPressed(keyCode: Int)
+    {
+        if keyCode == 49
+        {
+            self.spaceKeyPressed()
+        }
+    }
 }
 

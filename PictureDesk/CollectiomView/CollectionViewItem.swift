@@ -32,7 +32,7 @@ class CollectionViewItem: NSCollectionViewItem
         super.viewDidLoad()
         view.wantsLayer = true
         view.layer?.backgroundColor = NSColor.white.cgColor
-        view.layer?.borderColor = NSColor(colorLiteralRed: 0.5, green: 0.5, blue: 1.0, alpha: 0.8).cgColor
+        view.layer?.borderColor = NSColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 0.8).cgColor
         view.layer?.borderWidth = 0.0
     }
     
@@ -43,4 +43,5 @@ class CollectionViewItem: NSCollectionViewItem
             view.layer?.borderWidth = isSelected ? 2.0 : 0.0
         }
     }
+    
 }

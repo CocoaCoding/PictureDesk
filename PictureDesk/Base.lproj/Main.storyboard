@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13122.19"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13178.6"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -663,7 +663,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="PictureDesk" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="MainWindowController" customModule="PictureDesk" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Picture Desk" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -671,25 +671,23 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="C93A6636-04AC-42E1-AE34-17AC2091B199" displayMode="iconAndLabel" sizeMode="regular" id="wTa-Ea-18m">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="Xuv-ze-Vae"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="coC-1O-5q1"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="ejG-Lw-6Y2"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="1Bd-rt-crm"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="aSg-We-4Dv"/>
-                                <toolbarItem implicitItemIdentifier="71DD77BE-A210-443D-9620-9B24316773C6" label="Desktop Folder" paletteLabel="Desktop Folder" tag="-1" image="NSFolder" id="dAM-Jl-uJr">
+                                <toolbarItem implicitItemIdentifier="71DD77BE-A210-443D-9620-9B24316773C6" label="Desktop Folder" paletteLabel="Desktop Folder" tag="-1" image="ic_folder_black_24dp_2x" id="dAM-Jl-uJr">
                                     <connections>
                                         <action selector="desktopFolderButtonClickedWithSender:" target="Oky-zY-oP4" id="1MZ-Ls-rHy"/>
                                     </connections>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="0B096589-BA1A-4734-B98E-F22FFFF26928" label="Options" paletteLabel="Options" tag="-1" image="ic_settings_black_24dp_2x" id="BDu-at-o2K"/>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="dAM-Jl-uJr"/>
                                 <toolbarItem reference="aSg-We-4Dv"/>
-                                <toolbarItem reference="Xuv-ze-Vae"/>
-                                <toolbarItem reference="coC-1O-5q1"/>
-                                <toolbarItem reference="ejG-Lw-6Y2"/>
+                                <toolbarItem reference="BDu-at-o2K"/>
                             </defaultToolbarItems>
                         </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="Dw5-of-Jb0"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -723,7 +721,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="394"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="OyC-k6-uBc">
+                                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="OyC-k6-uBc" customClass="CustomTableView" customModule="PictureDesk" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="125" height="394"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -748,12 +746,12 @@
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <subviews>
                                                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u28-z2-apb">
-                                                                                            <rect key="frame" x="3" y="0.0" width="17" height="17"/>
+                                                                                            <rect key="frame" x="3" y="-3" width="17" height="17"/>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSFolder" id="D6B-bQ-BTp"/>
+                                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ic_folder_black_24dp_2x" id="D6B-bQ-BTp"/>
                                                                                         </imageView>
                                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ph-NI-WSC">
-                                                                                            <rect key="frame" x="25" y="0.0" width="97" height="17"/>
+                                                                                            <rect key="frame" x="25" y="-2" width="97" height="17"/>
                                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="J8Q-NX-wNA">
                                                                                                 <font key="font" metaFont="system" size="16"/>
@@ -815,7 +813,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="488" height="394"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <collectionView selectable="YES" allowsMultipleSelection="YES" id="54T-a2-jkx">
+                                                        <collectionView selectable="YES" allowsMultipleSelection="YES" id="54T-a2-jkx" customClass="CustomCollectionView" customModule="PictureDesk" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="488" height="394"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="EVI-lH-Kz1">
@@ -868,11 +866,11 @@
                                     <action selector="sliderValueChanged:" target="XfG-lQ-9wD" id="YHx-DN-WVs"/>
                                 </connections>
                             </slider>
-                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6I-as-dfo">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l6I-as-dfo">
                                 <rect key="frame" x="4" y="3" width="22" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19" id="Alv-9R-4pT"/>
-                                    <constraint firstAttribute="width" constant="22" id="p47-Du-nIL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="p47-Du-nIL"/>
                                 </constraints>
                                 <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="gWK-xR-cET">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -888,10 +886,11 @@
                             <constraint firstAttribute="trailing" secondItem="bgJ-B3-5OU" secondAttribute="trailing" id="7A7-xM-H5a"/>
                             <constraint firstItem="bgJ-B3-5OU" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="9YU-bm-Cvh"/>
                             <constraint firstItem="niL-od-uWw" firstAttribute="top" secondItem="bgJ-B3-5OU" secondAttribute="bottom" constant="5" id="G1L-Uq-Fac"/>
-                            <constraint firstItem="l6I-as-dfo" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="JfA-NM-OEb"/>
+                            <constraint firstItem="l6I-as-dfo" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="4" id="JfA-NM-OEb"/>
                             <constraint firstAttribute="bottom" secondItem="l6I-as-dfo" secondAttribute="bottom" constant="3" id="glz-pD-MaC"/>
                             <constraint firstAttribute="bottom" secondItem="niL-od-uWw" secondAttribute="bottom" constant="5" id="iab-1u-VOb"/>
                             <constraint firstAttribute="trailing" secondItem="niL-od-uWw" secondAttribute="trailing" constant="12" id="l14-Zr-pjA"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l6I-as-dfo" secondAttribute="trailing" constant="20" symbolic="YES" id="qYp-P7-RxJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -923,6 +922,7 @@
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSFolder" width="32" height="32"/>
+        <image name="ic_folder_black_24dp_2x" width="48" height="48"/>
+        <image name="ic_settings_black_24dp_2x" width="48" height="48"/>
     </resources>
 </document>

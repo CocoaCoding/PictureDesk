@@ -1,6 +1,17 @@
+2017-08-20
+- New Toolbar Icon
+- New App Icon
+- TableView Right Click Selection
+- CollectionView Right Click Selection
+
+Juli 10. 2017
+- Icon
+- Quicklook
+
 July 1. 2017
 - Swift 4 conversion
 - Rename with modal SheetWindow
+- Delete function implemented
 
 12. Juni 2017
 - Click on Folder to show its picture content

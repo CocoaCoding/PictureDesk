@@ -41,11 +41,20 @@ extension ViewController : NSTableViewDataSource, NSTableViewDelegate
     }
     
     // A row as selected. Show images of the folder
-    func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool
+    // Thanks to class CustomTableView, selections are now
+    // triggered with right click too
+    func tableViewSelectionDidChange(_ notification: Notification)
     {
+        let row = self.tableView.selectedRow
         let url = self.folderRepository.getFolderAt(index: row)
         imageDirectoryLoader.loadDataForFolderWithUrl(url)
         self.collectionView.reloadData()
+    }
+    
+    // A row as selected. Show images of the folder
+    func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool
+    {
+        // Works only with left click
         return true
     }
     
@@ -58,6 +67,8 @@ extension ViewController : NSTableViewDataSource, NSTableViewDelegate
         }
         return []
     }
+    
+    
     
     func tableView(_ tableView: NSTableView, acceptDrop info: NSDraggingInfo, row: Int, dropOperation: NSTableView.DropOperation) -> Bool
     {

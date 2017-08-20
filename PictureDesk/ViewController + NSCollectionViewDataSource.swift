@@ -140,6 +140,4 @@ extension ViewController : NSCollectionViewDataSource, NSCollectionViewDelegate
             print("nothing")
         }
     }
-    
-
 }

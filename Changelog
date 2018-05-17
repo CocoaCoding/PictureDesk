@@ -18,9 +18,8 @@ July 1. 2017
 - Drag & Drop from CollectionView to TableView, files are not moved yet.
 
 11. Juni 2017
-- NSOpenPanel für Verzeichnisauswahl
+- NSOpenPanel für Folder Picking
 - extension ViewController + NSTableViewDataSource
-- FolderRepository mit Load und Save Methoden
-- TableView und Add-Button im Fenster
-- Autosave wird im MainWindowController gesetzt, weil es im Interface Builder nicht funktioniert
-- Autosave für SplitView
+- FolderRepository with Load und Save methods
+- TableView and Add-Button in Window
+- Autosave fot SplitView
